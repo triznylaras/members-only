@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post</title>
+</head>
+<body>
+  <%= form_with model: @post do |form| %>
+  <div class="field">
+    <br> <%= form.label "Title:" %> <br>
+    <%= form.text_field :title, placeholder: "Title" %> <br><br>
+  </div>
+      
+  <div class="field">
+    <%= form.label "Body:" %> <br>
+    <%= form.text_area :body, placeholder: "Your thoughts here...", rows: '20', cols: '80' %> <br><br>
+  </div>
+      
+  <%= form.submit "Submit" %>
+  <% end %>
+</body>
+</html>
